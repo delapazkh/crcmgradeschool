@@ -1,0 +1,37 @@
+Functionalities:
+
+Admin
+	-UD Teachers
+	-Set teachers Active/Inactive
+	-UD Accounts
+	-CRUD Students
+	-UD Annoucements
+
+Principal: 
+	-Manage Teachers(CRUD)
+	-Assign Teachers to classes
+	-CRUD Annoucements
+
+Teachers:
+
+	-UPDATE PROFILE	
+	
+	Pre Elem
+	-CRUD Activities
+	-CRUD Lessons
+	-CRUD Worksheets
+	-CRUD Stories
+	-CRUD Gallery
+	-CRUD Songs
+	-CRUD games
+
+	Elem
+	-CRUD Activities
+	-CRUD Lessons
+	-CRUD Worksheets
+	-CRUD Gallery
+
+Parents/Users
+	-View/Download Everything
+
+
