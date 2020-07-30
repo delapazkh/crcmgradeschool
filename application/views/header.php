@@ -37,19 +37,44 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item current">
-        <a class="nav-link" href="<?php echo base_url(); ?>">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="<?php echo base_url().'HomeController/announcement'; ?>">Announcement</a>
+        <a class="nav-link" href="<?php echo base_url().'AnnouncementsController'; ?>">Announcement</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="worksheets.html">Schedule of classes</a>
       </li>
     </ul>
-    <ul class="navbar-nav">
-      <li class="nav-item">
-          <a class="nav-link" href="<?php echo base_url().'login'; ?>">Login</a>
-      </li>
-  </ul>
+
+    <?php  if($this->session->userdata('logged_in') == TRUE){?>
+    
+        <?php if($this->session->userdata('type') == 'teacher'){ ?>
+
+          <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="<?php echo base_url().'login/TeacherDashboardController'; ?>">Dashboard</a>
+            </li>
+         </ul>
+
+        <?php }else if($this->session->userdata('type') == 'admin'){ ?>
+          
+          <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="<?php echo base_url().'login/DashboardController'; ?>">Dashboard</a>
+            </li>
+         </ul>
+
+       <?php } ?>
+       
+    <?php }else{ ?> 
+      
+      <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="<?php echo base_url().'login'; ?>">Login</a>
+            </li>
+       </ul>
+    
+    <?php } ?>
   </div>
 </nav>

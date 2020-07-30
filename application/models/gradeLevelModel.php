@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class gradeLevelModel extends CI_Model {
+class GradeLevelModel extends CI_Model {
 
   public function __construct(){
     $this->load->database();

@@ -34,7 +34,7 @@
       <div class="list-group list-group-flush">
         <a href="<?php echo base_url(); ?>login/TeacherDashboardController" class="list-group-item list-group-item-action bg-light">Dashboard</a>
         <a href="<?php echo base_url(); ?>login/ManageActsController" class="list-group-item list-group-item-action bg-light">Activities</a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">Lessons</a>
+        <a href="<?php echo base_url(); ?>login/ManageLessonsController" class="list-group-item list-group-item-action bg-light">Lessons</a>
         <a href="<?php echo base_url(); ?>login/WorksheetsController" class="list-group-item list-group-item-action bg-light">Worksheets</a>
         <a href="#" class="list-group-item list-group-item-action bg-light">Stories</a>
         <a href="#" class="list-group-item list-group-item-action bg-light">Songs</a>
@@ -52,7 +52,7 @@
       <div class="list-group list-group-flush">
         <a href="<?php echo base_url(); ?>login/teacherDashboardController" class="list-group-item list-group-item-action bg-light">Dashboard</a>
         <a href="<?php echo base_url(); ?>login/manageActsController" class="list-group-item list-group-item-action bg-light">Activities</a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">Lessons</a>
+        <a href="<?php echo base_url(); ?>login/ManageLessonsController" class="list-group-item list-group-item-action bg-light">Lessons</a>
         <a href="<?php echo base_url(); ?>login/worksheetsController" class="list-group-item list-group-item-action bg-light">Worksheets</a>
         <a href="#" class="list-group-item list-group-item-action bg-light">Gallery</a>
       </div>

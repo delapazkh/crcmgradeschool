@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class NewActsController extends CI_Controller {
+class AnnouncementsController extends CI_Controller {
 
 	public function __construct(){
 		parent::__construct();
@@ -14,10 +14,7 @@ class NewActsController extends CI_Controller {
 		// 	redirect('login/dashboardController');
 		// }else {
 		 	$ses_id = $this->session->userdata('u_id');
-			//echo $ses_id;
 			$a_id = $this->session->userdata('a_id');
-			//echo $a_id;
-
 		// 	echo "logged in with id: ".$ses_id;
 		// 	redirect('login/teacherDashboardController');
 		// }
@@ -25,15 +22,11 @@ class NewActsController extends CI_Controller {
 
 	public function index()
 	{
-    $this->load->view('login/newActsView');
-	}
-
-	public function publish_act(){
-			$this->load->model('NewActsModel');
-		  $this->NewActsModel->save_act();
-			redirect("login/NewActsController");
-	}
-
-
+        $this->load->helper('url');
+		$this->load->model('AnnouncementModel');
+		$data['announcements'] = $this->AnnouncementModel->getAllAnns();
+		$this->load->view('announcementView', $data);
+    }
+    
 
 }

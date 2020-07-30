@@ -50,7 +50,14 @@
                     <div class="row" style="margin-bottom: 20px">
                       <div class="col-2"><img src="<?php echo base_url(); ?>images/empty_prof.png" class="img-thumbnail"></img></div>
                       <div class="col-10">
-                        <h5><?php echo $ann_row->ann_title ?></h5>
+                        <h5><?php echo $ann_row->ann_title ?>
+                          <a type="button" style="padding-right: 10px" class="btn btn-outline-danger float-right  btn-sm" data-toggle="modal" data-target="#delAnn<?php echo $ann_row->ann_id; ?>">
+                            <ion-icon style="color:red;" name="trash-outline"></ion-icon>
+                          </a>
+                            <a type="button" class="btn btn-outline-primary float-right  btn-sm" data-toggle="modal" data-target="#">
+                              <ion-icon style="color:blue;" name="create-outline"></ion-icon>
+                            </a>
+
                         <?php if ($ann_row->ann_by_id == '1'){ ?>
 
                         <h5 class="font-weight-light"><?php echo "Admin" ?></h5>
@@ -62,6 +69,26 @@
                           <?php } ?>
                         <h6 class="font-weight-light"><?php echo $ann_row->date; ?></h6>
                         <p style="margin-top: 10px"><?php echo $ann_row->ann_body ?></p>
+                      </div>
+                    </div>
+
+                    <div class="modal fade" id="delAnn<?php echo $ann_row->ann_id; ?>" tabindex="-1" role="dialog" aria-labelledby="delAnn<?php echo $ann_row->ann_id; ?>" aria-hidden="true">
+                      <div class="modal-dialog  modal-sm" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Delete announcement</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            Are you sure you want to delete this Post?
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                            <a href ="DashboardController/deleteAnn/<?php echo $ann_row->ann_id; ?>" type="button" class="btn btn-danger">Yes, Delete</a>
+                          </div>
+                        </div>
                       </div>
                     </div>
 

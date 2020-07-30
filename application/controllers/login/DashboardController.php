@@ -7,6 +7,7 @@ class DashboardController extends CI_Controller {
 		parent::__construct();
 		$this->load->helper('url');
 		$this->load->library('session');
+		$this->load->model('DashboardModel');
 		// if (!$this->session->userdata('logged_in')) {
 		// 	echo "You are not logged in";
 		// 	redirect('login/login');
@@ -28,6 +29,14 @@ class DashboardController extends CI_Controller {
 		$data['allUsers'] = $this->dashboardModel->getAllUsers();
 		$data['announcements'] = $this->dashboardModel->getAllAnns();
 		$this->load->view('login/dashboardView', $data);
+	}
+
+	public function deleteAnn($id){
+		$this->DashboardModel->delAnn($id);
+		$this->session->set_flashdata('success', '<div style="margin: 10px" class="alert alert-success" role="alert">
+    <strong>Alright!</strong> Record has been deleted successfully!
+  </div>');
+    redirect("login/DashboardController");
 	}
 
 	public function manageGradelvl()
@@ -98,7 +107,7 @@ class DashboardController extends CI_Controller {
 	function logout()
 		{
 			$this->session->sess_destroy();
-			redirect('login/login');
+			redirect('login');
 		}
 
 

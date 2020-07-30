@@ -82,8 +82,28 @@
                                   <td><?php echo $t_row->t_desn; ?></td>
                                   <td><?php echo $t_row->t_adv; ?></td>
                                   <td><?php echo $status; ?></td>
-                                  <td><a href="#">Edit</a> | <a href="#">Delete</a></td>
+                                  <td><a href="#">Edit</a> | <a href="#"  data-toggle="modal" data-target="#delT<?php echo $t_row->t_id; ?>">Delete</a></td>
                                 </tr>
+
+                                <div class="modal fade" id="delT<?php echo $t_row->t_id; ?>" tabindex="-1" role="dialog" aria-labelledby="delT<?php echo $t_row->t_id; ?>" aria-hidden="true">
+                                  <div class="modal-dialog  modal-sm" role="document">
+                                    <div class="modal-content">
+                                      <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel"><?php echo $t_row->fname." ".$t_row->lname; ?></h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                          <span aria-hidden="true">&times;</span>
+                                        </button>
+                                      </div>
+                                      <div class="modal-body">
+                                        Are you sure you want to delete this?
+                                      </div>
+                                      <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                        <a href ="UserManagementController/deleteTeacher/<?php echo $t_row->t_id; ?>" type="button" class="btn btn-danger">Yes, Delete</a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
                                 <?php } ?>
                               </tbody>
                             </table>
@@ -268,6 +288,9 @@
                           </div>
                         </div>
                       </div>
+
+
+
 
     </div>
     <!-- /#page-content-wrapper -->

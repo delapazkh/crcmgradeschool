@@ -74,7 +74,12 @@
                         </ul>
                         <div class="tab-content" id="myTabContent">
                           <div class="tab-pane fade show active" id="classInfo<?php echo $g_row->g_level_id; ?>" role="tabpanel" aria-labelledby="classInfo<?php echo $g_row->g_level_id; ?>-tab"><h5>Class Information</h5>
-                            <?php echo $g_row->fname." ".$g_row->lname; ?>
+                            <?php if($g_row->g_level_adv_id == 0){
+                                echo "Adviser not assigned";
+                              }else{
+
+                                echo "Adviser: ".$g_row->fname." ".$g_row->lname;
+                              } ?>
                           </div>
                           <div class="tab-pane fade" id="classList<?php echo $g_row->g_level_id; ?>" role="tabpanel" aria-labelledby="classList<?php echo $g_row->g_level_id; ?>-tab"><h5>Class List</h5></div>
                         </div>
@@ -194,7 +199,7 @@
                     </div>
                     <div class="col">
                         <select name="adviser" class="form-control">
-                          <option selected>Adviser</option>
+                          <option value="none" selected>Adviser</option>
                           <?php foreach ($allT as $trow) { ?>
                               <option value="<?php echo $trow->t_id; ?>"><?php echo $trow->fname." ".$trow->lname; ?></option>
                         <?php } ?>

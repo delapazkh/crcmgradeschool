@@ -22,23 +22,9 @@
                               </thead>
                               <tbody>
                                 <tr>
-                                  <td>Mark</td>
-                                  <td>Otto</td>
-                                  <td>@mdo</td>
-                                  <td>Published</td>
-                                  <td><a href="#">Edit</a> | <a href="#">Delete</a></td>
-                                </tr>
-                                <tr>
-                                  <td>Jacob</td>
-                                  <td>Thornton</td>
-                                  <td>@fat</td>
-                                  <td>Draft</td>
-                                  <td><a href="#">Edit</a> | <a href="#">Delete</a></td>
-                                </tr>
-                                <tr>
-                                  <td>Larry</td>
-                                  <td>the Bird</td>
-                                  <td>@twitter</td>
+                                  <td>Paper Machet Volcano</td>
+                                  <td>Christy Fernan</td>
+                                  <td>July 25, 2020</td>
                                   <td>Published</td>
                                   <td><a href="#">Edit</a> | <a href="#">Delete</a></td>
                                 </tr>

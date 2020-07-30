@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class dashboardModel extends CI_Model {
+class DashboardModel extends CI_Model {
 
   public function __construct(){
     $this->load->database();
@@ -23,6 +23,11 @@ class dashboardModel extends CI_Model {
 
     $res = $this->db->insert('teachers', $data);
     return $res;
+  }
+
+  function delAnn($id){
+    $this->db->where('ann_id', $id);
+    $this->db->delete('announcements');
   }
 
   function newSub($levelid){

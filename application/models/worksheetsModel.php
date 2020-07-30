@@ -1,13 +1,13 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class worksheetsModel extends CI_Model {
+class WorksheetsModel extends CI_Model {
 
   public function __construct(){
     $this->load->database();
   }
 
-  
+
 function newSub(){
     $lvl = 13;
     $data = array(
@@ -55,22 +55,22 @@ function newSub(){
      foreach ($mysubs as $subs) {
        $myUnits = $this->myUnits($subs->sub_id);
        foreach($myUnits as $unit){
-           $arr2 [] = array( 
+           $arr2 [] = array(
                 "unit_id" => $unit->unit_id,
                 "unit_name" => $unit->unit_name
            );
-           
+
         }
-        
+
      }
      $arr[] = array(
         "sub_id" => $subs->sub_id,
         "sub_name" =>$subs->subj_name,
         "sub_g_level" => $subs->g_level,
 
-        "Units" => $arr2 
+        "Units" => $arr2
         );
-    
+
 //    echo "<pre>";
 //    var_dump($arr);
 //    echo "</pre>";

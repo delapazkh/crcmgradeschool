@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class userManagementModel extends CI_Model {
+class UserManagementModel extends CI_Model {
 
   public function __construct(){
     $this->load->database();
@@ -52,6 +52,9 @@ class userManagementModel extends CI_Model {
     $res = $this->db->insert('users', $data);
   }
 
-
+  function delete($id){
+    $this->db->where('t_id', $id);
+    $this->db->delete('teachers');
+  }
 
 }

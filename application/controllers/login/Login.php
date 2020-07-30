@@ -41,7 +41,7 @@ class Login extends CI_Controller {
 					 'a_id'      => $check->a_id,
 					 'u_name'     => $check->u_name,
 					 'logged_in' => TRUE,
-					 't_adv' => $t_info->t_adv,
+						 't_adv' => $t_info->t_adv,
 					 'lname' => $t_info->lname,
 					 'fname' => $t_info->fname,
 					 't_hea' => $t_info->t_hea,

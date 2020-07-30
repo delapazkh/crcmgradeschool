@@ -10,13 +10,17 @@
                   <div class="card-body">
                     <!--Announcements-->
 
-                    <form>
+                    <form method="post" action="NewActsController/publish_act">
                       <div class="form-group">
                         <label>Add Title</label>
-                        <input type="Text" class="form-control" id="title" aria-describedby="emailHelp" placeholder="Enter Title">
+                        <input type="text" class="form-control" name="act_title" id="title" aria-describedby="emailHelp" placeholder="Enter Title">
+                        <input type="hidden" class="form-control" name="by_id" value="<?php echo $this->session->userdata('a_id'); ?>">
+                        <input type="hidden" class="form-control" name="act_date" value="<?php echo date("m.d.y");  ?>">
+                        <input type="hidden" class="form-control" name="status" value="Published">
+                        <input type="hidden" class="form-control" name="glevel" value="25">
                       </div>
                       <div class="form-group">
-                          <textarea style="height: 550px" class="form-control" id="mytextarea" rows="3"></textarea>
+                          <textarea style="height: 550px" name="content" class="form-control" id="mytextarea" rows="3"></textarea>
                         </div>
 
 

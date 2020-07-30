@@ -50,15 +50,15 @@
           <h5><strong>Grade Levels </strong></h5>
           </div>
           <div class="list-group">
-          <a href="nursery.html" style="background-color: #F958E3;" type="button" class="text-white list-group-item list-group-item-action">Nursery</a>
-          <button type="button"  style="background-color: #D355FF;" class="text-white list-group-item list-group-item-action">Kinder 1</button>
-          <button type="button"  style="background-color: #20C100;" class="text-white list-group-item list-group-item-action">Kinder 2</button>
-          <a href="grade1.html" style="background-color: #55B7FF;" type="button" class="text-white list-group-item list-group-item-action">Grade 1</a>
-          <button type="button" style="background-color: #F93333;" class="text-white list-group-item list-group-item-action">Grade 2</button>
-          <button type="button" style="background-color: #FAA300;" class="text-white list-group-item list-group-item-action">Grade 3</button>
-          <button type="button" style="background-color: #FFED17;" class="text-white list-group-item list-group-item-action">Grade 4</button>
-          <button type="button" style="background-color: #AFA31A;" class="text-white list-group-item list-group-item-action">Grade 5</button>
-          <button type="button"  class="text-black list-group-item list-group-item-action">Grade 6</button>
+          <a id="nrs" href="nursery.html" type="button" class="text-black list-group-item list-group-item-action">Nursery</a>
+          <button id="k1" type="button"   class="text-black list-group-item list-group-item-action">Kinder 1</button>
+          <button id="k2" type="button"   class="text-black list-group-item list-group-item-action">Kinder 2</button>
+          <a id="g1" href="grade1.html"  type="button" class="text-black list-group-item list-group-item-action">Grade 1</a>
+          <button id="g2" type="button"  class="text-black list-group-item list-group-item-action">Grade 2</button>
+          <button id="g3" type="button"  class="text-black list-group-item list-group-item-action">Grade 3</button>
+          <button id="g4" type="button"  class="text-black list-group-item list-group-item-action">Grade 4</button>
+          <button id="g5" type="button"  class="text-black list-group-item list-group-item-action">Grade 5</button>
+          <button id="g6" type="button"  class="text-black list-group-item list-group-item-action">Grade 6</button>
           </div>
         </div>
         </div>
